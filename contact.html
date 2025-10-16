@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Джордж Оруелл — Реєстрація та форми</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container header-row">
+
+        <div class="brand">
+          <div class="logo" aria-hidden="true">📘</div>
+          <div>Джордж Оруелл</div>
+        </div>
+
+        <nav aria-label="Глобальна навігація">
+          <ul>
+            <li>
+              <a href="index.html">Головна</a>
+            </li>
+            <li>
+              <a href="contact.html">Реєстрація</a>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+    </header>
+
+<main class="container">
+
+  <nav class="sticky-wrap" aria-label="Навігація форм">
+    <a href="#register">Реєстрація</a>
+    <a href="#login">Вхід</a>
+    <a href="#feedback">Зворотний зв’язок</a>
+  </nav>
+
+  <section class="card" id="about-layout">
+
+    <h1>Джордж Оруелл</h1>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/George_Orwell_press_photo.jpg" class="float-left" alt="Портрет Оруелла">
+    <p>Оруелл — літературний псевдонім Еріка Артура Блера. Після служби у Бірмі працював репортером і писав есе, досліджуючи соціальну нерівність у Європі.</p>
+    <img src="https://i1.sndcdn.com/artworks-000575834960-a757gm-t500x500.jpg" class="float-right" alt="Оруелл, 1946">
+    <p>Досвід громадянської війни в Іспанії визначив його антитоталітарні погляди; згодом він створив «Animal Farm» та «1984».</p>
+    
+    <div class="clearfix"></div>
+
+    <div class="stack">
+      <img src="https://cdn4.suspilne.media/images/resize/1020x1.78/4efb075d48f20924.jpg" alt="Animal Farm">
+      <img src="https://cdn4.suspilne.media/images/resize/794x0.1/1797524075e20f04.jpg" alt="1984">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoBiOSkWj20pr9vx20gpLpj_oQ5Wwpjhdd-g&s" alt="Orwell">
+    </div>
+
+  </section>
+
+  <section class="card mty" id="register">
+    <h2 class="section-title">Форма реєстрації</h2>
+
+    <form action="#" method="post" novalidate>
+
+      <div class="form-grid">
+        <div class="form-left">
+
+          <label for="avatar">Завантажити фото</label>
+          <input type="file" id="avatar" name="avatar" accept=".png,.jpg,.jpeg" multiple>
+          <label for="name">Ім’я</label>
+          <input type="text" id="name" name="name" placeholder="Ім’я" required minlength="2">
+          <label for="surname">Прізвище</label>
+          <input type="text" id="surname" name="surname" placeholder="Прізвище" required minlength="2">
+          <label>Стать</label>
+          
+          <div class="radio-row">
+            <div>
+              <input type="radio" id="male" name="gender" value="male" required><label for="male" class="inline">Чоловіча</label>
+            </div>
+            <div>
+              <input type="radio" id="female" name="gender" value="female"><label for="female" class="inline">Жіноча</label>
+            </div>
+          </div>
+
+          <label for="age">Вік</label>
+          <input type="number" id="age" name="age" min="14" max="120" value="21" required>
+          <label for="birth">Дата народження</label>
+          <input type="date" id="birth" name="birth" required>
+        </div>
+
+        <div class="form-right">
+          <label for="country">Країна проживання</label>
+
+          <select id="country" name="country" required>
+            <option value="">Оберіть країну</option>
+            <option>Україна</option>
+            <option>Великобританія</option>
+            <option>Німеччина</option>
+            <option>США</option>
+          </select>
+
+          <label for="phone">Номер телефону</label>
+          <input type="tel" id="phone" name="phone" placeholder="+38(0xx)xxx-xx-xx" pattern="^\+?\d{10,15}$" title="10–15 цифр, дозволено +">
+          <label for="social">Соцмережа</label>
+          <input type="url" id="social" name="social" placeholder="Посилання на соцмережу">
+          <label for="email">Ел. пошта</label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" autocomplete="email" required>
+          <label for="password">Пароль</label>
+          <input type="password" id="password" name="password" pattern=".{8,}" title="Мінімум 8 символів" required>
+          
+          <div class="agree-row">
+            <label for="agree" class="inline">Чи згодні Ви з умовами?</label>
+            <input type="checkbox" id="agree" name="agree" required>
+          </div>
+
+          <div class="actions">
+            <button type="submit">Зареєструватися</button>
+            <button type="reset" class="btn-secondary">Скасувати</button>
+          </div>
+
+        </div>
+
+      </div>
+    </form>
+
+  </section>
+
+  <section class="card mty" id="login">
+    
+    <h2 class="section-title">Форма входу</h2>
+
+    <form action="#" method="post" novalidate>
+
+      <fieldset><legend>Авторизація</legend>
+        <label for="login-user">Логін</label>
+        <input type="text" id="login-user" name="login" required>
+        <label for="login-pass">Пароль</label>
+        <input type="password" id="login-pass" name="pass" required>
+      </fieldset>
+
+      <div class="actions">
+        <button type="submit">Вхід</button>
+        <button type="reset" class="btn-secondary">Скасувати</button>
+      </div>
+
+    </form>
+  </section>
+
+  <section class="card mty" id="feedback">
+    
+    <h2 class="section-title">Форма зворотного зв’язку</h2>
+
+    <form action="#" method="post" enctype="multipart/form-data" novalidate>
+
+      <div class="form-grid">
+
+        <div class="form-left">
+
+          <label for="fb-name">Ім’я</label>
+          <input type="text" id="fb-name" name="fb-name" required>
+          <label for="fb-email">Ел. пошта</label>
+          <input type="email" id="fb-email" name="fb-email" placeholder="name@example.com" required>
+          <label for="fb-topic">Тема повідомлення</label>
+
+          <select id="fb-topic" name="fb-topic" required>
+            <option value="">Оберіть тему</option>
+            <option>Запитання</option>
+            <option>Відгук</option>
+            <option>Пропозиція</option>
+          </select>
+
+          <button type="submit" class="mty">Відправити</button>
+        </div>
+
+        <div class="form-right">
+          <label for="fb-message">Повідомлення</label>
+          <textarea id="fb-message" name="fb-message" rows="10" required placeholder="Введіть текст"></textarea>
+          <label for="fb-attach" class="mty">Додати файл</label>
+          <input type="file" id="fb-attach" name="fb-attach" accept=".pdf,.png,.jpg" multiple>
+        </div>
+
+      </div>
+
+    </form>
+
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    Посилання: 
+      <a href="https://uk.wikipedia.org/wiki/%D0%94%D0%B6%D0%BE%D1%80%D0%B4%D0%B6_%D0%9E%D1%80%D1%83%D0%B5%D0%BB%D0%BB" target="_blank">Wikipedia</a> • 
+      <a href="https://www.imdb.com/title/tt27052428/" target="_blank">Orwell documentary</a> •
+      <a href="https://orwellfoundation.com/" target="_blank">Orwell Foundation</a></div></footer>
+  </body>
+</html>
