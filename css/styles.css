@@ -183,12 +183,6 @@ img.responsive {
     gap: 16px;
 }
 
-@media (max-width: 720px) {
-    .book-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 .book-grid img {
     width: 100%;
     aspect-ratio: 3/4;
