@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Джордж Оруелл </title>
-    <link rel="stylesheet" href="./css/styles.css">
+    <title>Джордж Оруелл</title>
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="js/quiz.js" defer></script>
   </head>
   <body>
 
@@ -24,6 +25,7 @@
             <li><a href="#bio">Біографія</a></li>
             <li><a href="#books">Книги</a></li>
             <li><a href="#awards">Нагороди</a></li>
+            <li><a href="#quiz-app">Тест з JavaScript</a></li>
             <li><a href="contact.html">Реєстрація</a></li>
           </ul>
         </nav>
@@ -40,6 +42,7 @@
           <li><a href="#bio">Біографія</a></li>
           <li><a href="#books">Книги</a></li>
           <li><a href="#awards">Нагороди</a></li>
+          <li><a href="#quiz-app">Комплексний тест з JavaScript</a></li>
           <li><a href="#contacts">Корисні посилання</a></li>
         </ul>
       </section>
@@ -130,6 +133,88 @@
           </table>
         </div>
 
+      </section>
+
+      <section class="card mty" id="quiz-app">
+        <h2 class="section-title">Комплексний тест з JavaScript</h2>
+
+        <form id="user-form" class="quiz-user-form" novalidate>
+          <div class="form-grid">
+            <div class="form-left">
+              <label for="studentName">Ім’я студента</label>
+              <input
+                type="text"
+                id="studentName"
+                name="studentName"
+                required
+                minlength="2"
+                placeholder="Введіть ім’я"
+              >
+
+              <label for="studentGroup">Група</label>
+              <input
+                type="text"
+                id="studentGroup"
+                name="studentGroup"
+                required
+                pattern="^[А-Яа-яA-Za-z0-9\- ]{2,}$"
+                placeholder="Наприклад: ТР-43"
+              >
+            </div>
+
+            <div class="form-right">
+              <p><strong>Інструкція:</strong></p>
+              <ul class="quiz-instructions">
+                <li>Заповніть ім’я та групу.</li>
+                <li>Оберіть рівень складності.</li>
+                <li>Виконайте <strong>10 випадкових завдань</strong>.</li>
+                <li>У тесті є: radio, checkbox, select, fill-in-the-blank, drag &amp; drop, debugging, написання коду.</li>
+              </ul>
+
+              <div class="actions mty">
+                <button type="submit">Підтвердити дані</button>
+                <button type="reset" class="btn-secondary">Очистити</button>
+              </div>
+
+              <p class="quiz-user-status" id="user-status">
+                Дані ще не підтверджено.
+              </p>
+            </div>
+          </div>
+        </form>
+
+        <div class="quiz-level-panel mty">
+          <h3>Рівень складності</h3>
+          <div id="level-buttons" class="quiz-level-buttons">
+            <button type="button" data-level="easy" disabled>Початковий</button>
+            <button type="button" data-level="medium" disabled>Середній</button>
+            <button type="button" data-level="hard" disabled>Складний</button>
+          </div>
+          <p class="quiz-level-hint">
+            Спочатку підтвердіть ім’я та групу, потім оберіть рівень.
+          </p>
+        </div>
+
+        <form id="quiz-form" class="quiz-form" novalidate>
+          <div id="quiz-questions"></div>
+
+          <div class="actions mty">
+            <button type="submit" id="btn-submit-quiz">Завершити тест</button>
+            <button type="button" class="btn-secondary" id="btn-reset-quiz">Скинути відповіді</button>
+          </div>
+        </form>
+
+        <section class="quiz-result card mty" id="quiz-result">
+          <h3>Результат тесту</h3>
+          <p id="result-summary">Результати ще не обчислені.</p>
+          <p id="result-details"></p>
+          <p id="result-storage"></p>
+        </section>
+
+        <section class="quiz-last card mty" id="quiz-last">
+          <h3>Останній збережений результат</h3>
+          <p id="last-result-text">Немає збережених результатів.</p>
+        </section>
       </section>
 
       <section class="card mty center" id="contacts">

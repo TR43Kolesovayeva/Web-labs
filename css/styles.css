@@ -496,3 +496,189 @@ footer a {
   }
 }
 
+.quiz-user-form {
+  margin-top: 0.75rem;
+}
+
+.quiz-instructions {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.quiz-user-status {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.quiz-user-status.ok {
+  color: #16a34a;
+}
+
+.quiz-user-status.error {
+  color: #dc2626;
+}
+
+.quiz-level-panel {
+  border-top: 1px dashed #e2e8f0;
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.quiz-level-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.quiz-level-buttons button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.quiz-level-buttons button.active {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.quiz-level-hint {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 0.5rem;
+}
+
+.quiz-form {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.quiz-question {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: #f9fafb;
+}
+
+.quiz-question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.quiz-question-title {
+  font-weight: 600;
+}
+
+.quiz-question-type {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.quiz-options {
+  margin-top: 0.5rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.quiz-code {
+  font-family: "Fira Code", Consolas, monospace;
+  font-size: 0.9rem;
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.quiz-input-correct {
+  border-color: #22c55e !important;
+}
+
+.quiz-input-wrong {
+  border-color: #ef4444 !important;
+}
+
+
+.quiz-dnd-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.quiz-dnd-column h4 {
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.quiz-dnd-source,
+.quiz-dnd-target {
+  min-height: 3rem;
+  border: 1px dashed #cbd5e1;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  display: grid;
+  gap: 0.25rem;
+  background: #f8fafc;
+}
+
+.quiz-dnd-item {
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.5rem;
+  background: #e2e8f0;
+  cursor: grab;
+}
+
+.quiz-dnd-target-slot {
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.5rem;
+  background: #e5e7eb;
+  min-height: 2rem;
+}
+
+.quiz-dnd-target-slot.over {
+  outline: 2px dashed #2563eb;
+}
+
+
+.quiz-inline-input {
+  display: inline-block;
+  width: 5rem;
+  padding: 0.2rem 0.3rem;
+  margin: 0 0.2rem;
+  font-size: 0.85rem;
+}
+
+
+.quiz-hint-btn {
+  display: inline-block;
+  margin-left: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  background: #e2e8f0;
+  cursor: pointer;
+}
+
+
+.quiz-result p,
+.quiz-last p {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.quiz-result strong {
+  font-weight: 800;
+}
+
+
+@media (max-width: 768px) {
+  .quiz-dnd-wrap {
+    grid-template-columns: 1fr;
+  }
+}
